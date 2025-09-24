@@ -1,0 +1,2 @@
+# VibeCodingERP
+Vibe Coding ERP
