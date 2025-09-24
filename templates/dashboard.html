@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="mb-3">主控台</h3>
+<div class="row g-3">
+  <div class="col-md-3">
+    <a class="card text-decoration-none" href="/orders">
+      <div class="card-body">
+        <h5 class="card-title">訂單管理</h5>
+        <p class="card-text small">建立、查詢、狀態</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-3">
+    <a class="card text-decoration-none" href="/purchase">
+      <div class="card-body">
+        <h5 class="card-title">採購管理</h5>
+        <p class="card-text small">新增、入庫狀態</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-3">
+    <a class="card text-decoration-none" href="/inventory">
+      <div class="card-body">
+        <h5 class="card-title">庫存管理</h5>
+        <p class="card-text small">查詢、出入庫</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-3">
+    <a class="card text-decoration-none" href="/finance">
+      <div class="card-body">
+        <h5 class="card-title">財務報表</h5>
+        <p class="card-text small">毛利、收入、庫存價值</p>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-3">
+    <a class="card text-decoration-none" href="/admin">
+      <div class="card-body">
+        <h5 class="card-title">系統管理</h5>
+        <p class="card-text small">預設帳號、初始化</p>
+      </div>
+    </a>
+  </div>
+</div>
+{% endblock %}
+
+

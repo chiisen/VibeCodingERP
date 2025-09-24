@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="mb-3">財務報表</h3>
+<div class="row g-3">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="text-muted small">銷貨收入</div>
+        <div class="fs-4">{{ total_revenue }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="text-muted small">採購成本（已入庫）</div>
+        <div class="fs-4">{{ total_cost }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="text-muted small">庫存價值</div>
+        <div class="fs-4">{{ inventory_value }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+

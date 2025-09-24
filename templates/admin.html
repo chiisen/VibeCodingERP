@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="mb-3">系統管理</h3>
+
+<div class="mb-3">
+  <div class="text-muted small">可用帳號：</div>
+  <ul>
+    {% for u in users %}
+      <li>{{ u }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<form method="post" class="mb-3">
+  <input type="hidden" name="action" value="reset">
+  <button type="submit" class="btn btn-warning">初始化（清空暫存資料）</button>
+  {% if message %}
+    <span class="ms-3 text-success">{{ message }}</span>
+  {% endif %}
+</form>
+{% endblock %}
+
+

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3>訂單列表</h3>
+  <a href="#" class="btn btn-sm btn-secondary disabled">新增（稍後實作）</a>
+  <!-- 後續會補上建立訂單表單與狀態更新 -->
+  <!-- 先顯示列表框架 -->
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>客戶</th>
+      <th>產品</th>
+      <th>數量</th>
+      <th>單價</th>
+      <th>狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for o in orders %}
+    <tr>
+      <td>{{ o.id }}</td>
+      <td>{{ o.customer }}</td>
+      <td>{{ o.product }}</td>
+      <td>{{ o.quantity }}</td>
+      <td>{{ o.unit_price }}</td>
+      <td>{{ o.status }}</td>
+    </tr>
+  {% else %}
+    <tr><td colspan="6" class="text-center text-muted">尚無資料</td></tr>
+  {% endfor %}
+  </tbody>
+ </table>
+{% endblock %}
+
+
